@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pupusería El Sabor - Auténtica Comida Salvadoreña</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">🌮 El Sabor</div>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#servicios">Menú</a></li>
+                <li><a href="#reservas">Reservas</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Pupusería El Sabor</h1>
+            <p>El auténtico sabor de El Salvador en cada bocado</p>
+            <a href="#reservas" class="btn-primary">Reservar Mesa</a>
+        </div>
+    </section>
+
+    <!-- Nosotros -->
+    <section id="nosotros" class="nosotros">
+        <div class="container">
+            <h2>Sobre Nosotros</h2>
+            <p>Somos una familia salvadoreña con más de 15 años brindando el auténtico sabor de nuestras pupusas. 
+               Utilizamos ingredientes frescos y recetas tradicionales transmitidas de generación en generación. 
+               Nuestro compromiso es ofrecerte la mejor experiencia gastronómica con el calor de hogar.</p>
+            <div class="features">
+                <div class="feature">
+                    <i class="fas fa-award"></i>
+                    <h3>Calidad</h3>
+                    <p>Ingredientes 100% frescos</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-heart"></i>
+                    <h3>Tradición</h3>
+                    <p>Recetas familiares</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-smile"></i>
+                    <h3>Servicio</h3>
+                    <p>Atención personalizada</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios/Menú -->
+    <section id="servicios" class="servicios">
+        <div class="container">
+            <h2>Nuestro Menú</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <div class="menu-icon">🫓</div>
+                    <h3>Pupusas Tradicionales</h3>
+                    <p>Queso, frijoles, chicharrón o revueltas</p>
+                    <span class="price">$1.50 c/u</span>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-icon">🥘</div>
+                    <h3>Yuca Frita</h3>
+                    <p>Acompañada de chicharrón y curtido</p>
+                    <span class="price">$5.00</span>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-icon">🌯</div>
+                    <h3>Tamales</h3>
+                    <p>Elaborados con masa de maíz y pollo</p>
+                    <span class="price">$2.50</span>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-icon">🥤</div>
+                    <h3>Bebidas Típicas</h3>
+                    <p>Fresco de ensalada, horchata, kolashampan</p>
+                    <span class="price">$2.00</span>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-icon">🍗</div>
+                    <h3>Pollo Frito</h3>
+                    <p>Con papas fritas y ensalada</p>
+                    <span class="price">$7.50</span>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-icon">🍰</div>
+                    <h3>Postres</h3>
+                    <p>Quesadilla, arroz con leche, empanadas</p>
+                    <span class="price">$3.00</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulario -->
+    <section id="reservas" class="reservas">
+        <div class="container">
+            <h2>Reserva tu Mesa</h2>
+            <form id="reservationForm" class="reservation-form">
+                <div class="form-group">
+                    <label for="nombre">Nombre Completo *</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                    <span class="error" id="error-nombre"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="telefono">Teléfono *</label>
+                    <input type="tel" id="telefono" name="telefono" required>
+                    <span class="error" id="error-telefono"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" name="email">
+                    <span class="error" id="error-email"></span>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fecha">Fecha *</label>
+                        <input type="date" id="fecha" name="fecha" required>
+                        <span class="error" id="error-fecha"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="hora">Hora *</label>
+                        <input type="time" id="hora" name="hora" required>
+                        <span class="error" id="error-hora"></span>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="personas">Número de Personas *</label>
+                    <select id="personas" name="personas" required>
+                        <option value="">Seleccione...</option>
+                        <option value="1">1 persona</option>
+                        <option value="2">2 personas</option>
+                        <option value="3-4">3-4 personas</option>
+                        <option value="5-8">5-8 personas</option>
+                        <option value="8+">Más de 8</option>
+                    </select>
+                    <span class="error" id="error-personas"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="mensaje">Mensaje o Solicitudes Especiales</label>
+                    <textarea id="mensaje" name="mensaje" rows="3"></textarea>
+                </div>
+                
+                <button type="submit" class="btn-submit">Confirmar Reserva</button>
+            </form>
+            
+            <div id="successMessage" class="success-message" style="display: none;">
+                <i class="fas fa-check-circle"></i>
+                <h3>¡Reserva Confirmada!</h3>
+                <p>Gracias por reservar en Pupusería El Sabor. Te esperamos.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Pupusería El Sabor</h3>
+                    <p>Auténtica comida salvadoreña</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <p><i class="fas fa-phone"></i> +503 2222-3333</p>
+                    <p><i class="fas fa-envelope"></i> info@elsabor.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> San Salvador, El Salvador</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Síguenos</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Pupusería El Sabor. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
